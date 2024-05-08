@@ -1,4 +1,4 @@
-﻿namespace _09_decorator_keroNight;
+﻿namespace _09_decorator_keroNight.MyExample;
 
 public interface IBeverage
 {
