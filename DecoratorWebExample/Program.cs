@@ -5,7 +5,7 @@ namespace DecoratorWebExample;
 
 public static class Program
 {
-    private static void Main(string[] args)
+    private static void Main()
     {
         ICoffee coffee = new SimpleCoffee();
         Console.WriteLine(coffee.GetDescription() + ": $" + coffee.GetCost());
