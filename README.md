@@ -7,6 +7,10 @@
 - В README файлі навести UML діаграму класів для коду згідно власного варіанту з короткими поясненнями.
 - Закомітити код та зробити pull request.
 
+![image](https://github.com/Ostroh-Academy/09-decorator-keroNight/assets/107807003/7e7e248f-8dd6-4934-ac02-ef14fa381fa5)
+![image](https://github.com/Ostroh-Academy/09-decorator-keroNight/assets/107807003/010f665b-d618-4ec8-a0b2-d144ba4c22ad)
+
+
 ## Варіанти індивідуальних завдань для патерну "Декоратор"
 
 1. **Декоратор для новорічної ялинки**
