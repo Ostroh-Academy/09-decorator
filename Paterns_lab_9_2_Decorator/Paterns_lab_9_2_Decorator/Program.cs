@@ -1,5 +1,5 @@
 ﻿Console.OutputEncoding = System.Text.Encoding.UTF8;
-// Створюємо звичайну кнопку.
+
 IButton simpleButton = new SimpleButton("Click me");
 
 // Додаємо до неї іконку та відображаємо.
