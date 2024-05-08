@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/6zBS7few)
 # Патерн декоратор (Decorator)
 
 - Потрібно вивчити теоретичний матеріал та написати власноруч приклад коду для патерну decorator. Деяку теоретичну інформацію можна почерпнути тут https://refactoring.guru/uk/design-patterns/decorator
@@ -82,3 +83,7 @@
 
 25. **Декоратор для електронних платіжних систем з додаванням лояльності та винагород**
     Створити декоратор, що інтегрує програми лояльності і винагороди в електронні платіжні системи, стимулюючи користувачів до частих покупок.
+
+    ## UML
+    ![image](https://github.com/Ostroh-Academy/09-decorator-havrylchyk/assets/92024271/f29f8df6-fea6-4f73-a3bc-34cfc221abe7)
+
