@@ -1,6 +1,6 @@
-﻿using Laboratory9.Coffee;
-using Laboratory9.Coffee.Api;
-using Laboratory9.Coffee.Decorators;
+﻿using Laboratory9.Laptops;
+using Laboratory9.Laptops.Api;
+using Laboratory9.Laptops.Decorators;
 
 namespace Laboratory9;
 
@@ -8,46 +8,31 @@ internal static class Program
 {
     private static void Main()
     {
-        ShowOffBasicCoffee();
-        ShowOffCoffeeWithMilk();
-        ShowOffCoffeeWithMilkAndSugar();
-        ShowOffCoffeeWithDoubleSugar();
+        ShowOffBasicLaptop();
+        ShowOffLaptopWithAllMilitaryFeatures();
         Console.ReadLine();
     }
 
-    private static void ShowOffBasicCoffee()
+    private static void ShowOffBasicLaptop()
     {
         Console.WriteLine();
-        Console.WriteLine("Basic coffee:");
-        ICoffee basicCoffee = new BasicCoffee();
-        Console.WriteLine("Ingredients: " + basicCoffee.GetIngredients());
-        Console.WriteLine("Cost: $" + basicCoffee.GetCost());
+        Console.WriteLine("Basic Laptop:");
+        ILaptop basicLaptop = new BasicLaptop();
+        Console.WriteLine("Description: " + basicLaptop.GetFeatures());
+        Console.WriteLine("Price: $" + basicLaptop.GetPrice());
     }
 
-    private static void ShowOffCoffeeWithMilk()
+    private static void ShowOffLaptopWithAllMilitaryFeatures()
     {
         Console.WriteLine();
-        Console.WriteLine("Coffee with milk:");
-        ICoffee coffeeWithMilk = new MilkDecorator(new BasicCoffee());
-        Console.WriteLine("Ingredients: " + coffeeWithMilk.GetIngredients());
-        Console.WriteLine("Cost: $" + coffeeWithMilk.GetCost());
-    }
-
-    private static void ShowOffCoffeeWithMilkAndSugar()
-    {
-        Console.WriteLine();
-        Console.WriteLine("Coffee with milk and sugar:");
-        ICoffee coffeeWithMilkAndSugar = new SugarDecorator(new MilkDecorator(new BasicCoffee()));
-        Console.WriteLine("Ingredients: " + coffeeWithMilkAndSugar.GetIngredients());
-        Console.WriteLine("Cost: $" + coffeeWithMilkAndSugar.GetCost());
-    }
-
-    private static void ShowOffCoffeeWithDoubleSugar()
-    {
-        Console.WriteLine();
-        Console.WriteLine("Coffee with double sugar:");
-        ICoffee coffeeWithDoubleSugar = new SugarDecorator(new SugarDecorator(new BasicCoffee()));
-        Console.WriteLine("Ingredients: " + coffeeWithDoubleSugar.GetIngredients());
-        Console.WriteLine("Cost: $" + coffeeWithDoubleSugar.GetCost());
+        Console.WriteLine("Laptop with all military Features:");
+        ILaptop laptopWithMilitary = new LaptopSecretArmyEncryptionDecorator(
+            new LaptopSatelliteConnectionDecorator(
+                new LaptopBiggerBatteryDecorator(
+                    new LaptopAdvanceProtectionDecorator(
+                        new BasicLaptop()))));
+        
+        Console.WriteLine("Description: " + laptopWithMilitary.GetFeatures());
+        Console.WriteLine("Price: $" + laptopWithMilitary.GetPrice());
     }
 }
