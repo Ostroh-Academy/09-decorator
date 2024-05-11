@@ -1,0 +1,14 @@
+D:\ОА\Патерни проектування\Patterns\Lab9\bin\Debug\net8.0\Lab9.exe
+D:\ОА\Патерни проектування\Patterns\Lab9\bin\Debug\net8.0\Lab9.deps.json
+D:\ОА\Патерни проектування\Patterns\Lab9\bin\Debug\net8.0\Lab9.runtimeconfig.json
+D:\ОА\Патерни проектування\Patterns\Lab9\bin\Debug\net8.0\Lab9.dll
+D:\ОА\Патерни проектування\Patterns\Lab9\bin\Debug\net8.0\Lab9.pdb
+D:\ОА\Патерни проектування\Patterns\Lab9\obj\Debug\net8.0\Lab9.GeneratedMSBuildEditorConfig.editorconfig
+D:\ОА\Патерни проектування\Patterns\Lab9\obj\Debug\net8.0\Lab9.AssemblyInfoInputs.cache
+D:\ОА\Патерни проектування\Patterns\Lab9\obj\Debug\net8.0\Lab9.AssemblyInfo.cs
+D:\ОА\Патерни проектування\Patterns\Lab9\obj\Debug\net8.0\Lab9.csproj.CoreCompileInputs.cache
+D:\ОА\Патерни проектування\Patterns\Lab9\obj\Debug\net8.0\Lab9.dll
+D:\ОА\Патерни проектування\Patterns\Lab9\obj\Debug\net8.0\refint\Lab9.dll
+D:\ОА\Патерни проектування\Patterns\Lab9\obj\Debug\net8.0\Lab9.pdb
+D:\ОА\Патерни проектування\Patterns\Lab9\obj\Debug\net8.0\Lab9.genruntimeconfig.cache
+D:\ОА\Патерни проектування\Patterns\Lab9\obj\Debug\net8.0\ref\Lab9.dll
