@@ -1,3 +1,5 @@
+![image](https://github.com/Ostroh-Academy/09-decorator-Stanislav-Koloda/assets/91200174/fbbeb350-93a8-461a-a545-880f6af9cd6c)
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/6zBS7few)
 # Патерн декоратор (Decorator)
 
