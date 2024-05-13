@@ -10,13 +10,18 @@ namespace lab_9
     {
         static void Main(string[] args)
         {
-            // Замовляємо каву з молоком та цукром
-            Beverage coffeeWithMilkAndSugar = new SugarDecorator(new MilkDecorator(new Coffee()));
+            // Створення базового аудіофайлу
+            IAudioFile audioFile = new ConcreteAudioFile("music.mp3");
 
-            // Виводимо опис та ціну напою
-            Console.WriteLine("Напій: " + coffeeWithMilkAndSugar.Description);
-            Console.WriteLine("Ціна: $" + coffeeWithMilkAndSugar.Cost());
-            Console.ReadKey();
+            // Додавання ефекту реверберації
+            audioFile = new ReverbDecorator(audioFile);
+
+            // Додавання ефекту ехо
+            audioFile = new EchoDecorator(audioFile);
+
+            // Відтворення аудіофайлу з ефектами
+            audioFile.Play();
+            Console.ReadLine();
         }
     }
 }

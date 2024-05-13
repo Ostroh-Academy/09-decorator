@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Milk + Suggar.cs" />
-    <Compile Include="Class2.cs" />
+    <Compile Include="Interface + IAudioFile.cs" />
+    <Compile Include="Decorators.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
