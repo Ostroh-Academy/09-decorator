@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RefactoringGuru.DesignPatterns.Composite.Conceptual
+namespace Denysiuk_decorator
 {
     // The base Component interface defines operations that can be altered by
     // decorators.
