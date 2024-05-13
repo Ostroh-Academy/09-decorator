@@ -1,17 +1,21 @@
-﻿namespace LAB_9
+﻿using LAB_9;
+
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Comp component = new ConcreteComponent();
-            Console.WriteLine(component.Operation());
+        IButton button = new SimpleButton("Натиснiть");
+        button.Render();
 
-            Comp decoratedComponent = new ConcreteDecoratorA(component);
-            Console.WriteLine(decoratedComponent.Operation());
+        button = new IconButtonDecorator(button);
+        button.Render();
 
-            decoratedComponent = new ConcreteDecoratorB(decoratedComponent);
-            Console.WriteLine(decoratedComponent.Operation());
-        }
+        button = new ItalicButtonDecorator(button);
+        button.Render();
+
+        button = new ColorButtonDecorator(button);
+        button.Render();
+
+        Console.ReadLine();
     }
 }

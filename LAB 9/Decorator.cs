@@ -6,52 +6,71 @@ using System.Threading.Tasks;
 
 namespace LAB_9
 {
-    interface Comp
+    using System;
+    interface IButton
     {
-        string Operation();
+        void Render();
     }
+    class SimpleButton : IButton
+    {
+        private string text;
 
-    class ConcreteComponent : Comp
-    {
-        public string Operation()
+        public SimpleButton(string text)
         {
-            return "ConcreteComponent";
-        }
-    }
-    abstract class Decorator : Comp
-    {
-        protected Comp component;
-
-        public Decorator(Comp component)
-        {
-            this.component = component;
-        }
-        public virtual string Operation()
-        {
-            return component.Operation();
-        }
-    }
-    class ConcreteDecoratorA : Decorator
-    {
-        public ConcreteDecoratorA(Comp component) : base(component)
-        {
+            this.text = text;
         }
 
-        public override string Operation()
+        public void Render()
         {
-            return $"ConcreteDecoratorA({base.Operation()})";
+            Console.WriteLine($"Кнопка: {text}");
         }
     }
-    class ConcreteDecoratorB : Decorator
+    abstract class ButtonDecorator : IButton
     {
-        public ConcreteDecoratorB(Comp component) : base(component)
+        protected IButton button;
+
+        public ButtonDecorator(IButton button)
+        {
+            this.button = button;
+        }
+
+        public virtual void Render()
+        {
+            button.Render();
+        }
+    }
+    class IconButtonDecorator : ButtonDecorator
+    {
+        public IconButtonDecorator(IButton button) : base(button)
         {
         }
 
-        public override string Operation()
+        public override void Render()
         {
-            return $"ConcreteDecoratorB({base.Operation()})";
+            base.Render();
+            Console.WriteLine("iконка для кнопки");
+        }
+    } 
+    class ItalicButtonDecorator : ButtonDecorator
+    {
+        public ItalicButtonDecorator(IButton button) : base(button)
+        {
+        }
+        public override void Render()
+        {
+            base.Render();
+            Console.WriteLine("Похилий шрифт");
         }
     }
-
+    class ColorButtonDecorator : ButtonDecorator
+    {
+        public ColorButtonDecorator(IButton button) : base(button)
+        {
+        }
+        public override void Render()
+        {
+            base.Render();
+            Console.WriteLine("Змiна фону");
+        }
+    }
 }
