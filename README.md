@@ -1,4 +1,7 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/6zBS7few)
 # Патерн декоратор (Decorator)
+
+https://github.com/Ostroh-Academy/09-decorator-junarik/blob/main/Screenshot%202024-05-26%20190612.png
 
 - Потрібно вивчити теоретичний матеріал та написати власноруч приклад коду для патерну decorator. Деяку теоретичну інформацію можна почерпнути тут https://refactoring.guru/uk/design-patterns/decorator
 - Закомітити приклад НАПИСАНИЙ власноруч та зробити pull request.
