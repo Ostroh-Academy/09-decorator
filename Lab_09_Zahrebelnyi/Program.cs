@@ -4,16 +4,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Базовий будинок
-        House house = new ConcreteHouse();
-        Console.WriteLine($"{house.GetDescription()} costs {house.GetCost()}");
+        // Базова ялинка
+        ChristmasTree tree = new ChristmasTreeEntity();
+        Console.WriteLine($"{tree.GetDescription()} costs {tree.GetCost()}");
 
-        // Будинок з басейном
-        house = new PoolDecorator(house);
-        Console.WriteLine($"{house.GetDescription()} costs {house.GetCost()}");
+        // Ялинка з іграшками
+        tree = new OrnamentDecorator(tree);
+        Console.WriteLine($"{tree.GetDescription()} costs {tree.GetCost()}");
 
-        // Будинок з басейном та гаражем
-        house = new GarageDecorator(house);
-        Console.WriteLine($"{house.GetDescription()} costs {house.GetCost()}");
+        // Ялинка з іграшками та гірляндами
+        tree = new GarlandDecorator(tree);
+        Console.WriteLine($"{tree.GetDescription()} costs {tree.GetCost()}");
+
+        // Ялинка з іграшками, гірляндами та світлодіодними гірляндами
+        tree = new LedLightsDecorator(tree);
+        Console.WriteLine($"{tree.GetDescription()} costs {tree.GetCost()}");
     }
 }

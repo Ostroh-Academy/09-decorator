@@ -1,15 +1,15 @@
 namespace Lab_09_Zahrebelnyi
 {
-    public class ConcreteHouse : House
+    public class ChristmasTreeEntity : ChristmasTree
     {
         public override string GetDescription()
         {
-            return "Concrete house";
+            return "Christmas Tree";
         }
 
         public override double GetCost()
         {
-            return 20000; // базова вартість будинку
+            return 30; // базова вартість ялинки
         }
     }
 }
