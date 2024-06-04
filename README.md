@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/6zBS7few)
 # Патерн декоратор (Decorator)
 
 - Потрібно вивчити теоретичний матеріал та написати власноруч приклад коду для патерну decorator. Деяку теоретичну інформацію можна почерпнути тут https://refactoring.guru/uk/design-patterns/decorator
@@ -82,3 +83,12 @@
 
 25. **Декоратор для електронних платіжних систем з додаванням лояльності та винагород**
     Створити декоратор, що інтегрує програми лояльності і винагороди в електронні платіжні системи, стимулюючи користувачів до частих покупок.
+
+
+<img width="690" alt="lab9" src="https://github.com/Ostroh-Academy/09-decorator-ViktoriaDenyshchuk/assets/92024304/5a5af4f5-57f0-4168-9606-733d298d09a2">
+
+Ця UML діаграма представляє структуру програми для обробки аудіофайлів. Вона складається з базового інтерфейсу IAudioFile, який визначає метод Play(), та класів, які реалізують цей інтерфейс: AudioEffectDecorator, EchoDecorator, ReverbDecorator і SimpleAudioFile.
+
+- AudioEffectDecorator є абстрактним класом, що декорує об'єкти типу IAudioFile, додаючи до них аудіо ефекти.
+- EchoDecorator та ReverbDecorator розширюють AudioEffectDecorator, додаючи ефекти ехо та реверберації відповідно.
+- SimpleAudioFile - це простий аудіофайл, який можна відтворювати без будь-яких ефектів.
