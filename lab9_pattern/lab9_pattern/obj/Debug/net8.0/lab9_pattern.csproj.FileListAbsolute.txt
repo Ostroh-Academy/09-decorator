@@ -1,0 +1,14 @@
+C:\Users\gorasima\source\repos\lab9_pattern\lab9_pattern\bin\Debug\net8.0\lab9_pattern.exe
+C:\Users\gorasima\source\repos\lab9_pattern\lab9_pattern\bin\Debug\net8.0\lab9_pattern.deps.json
+C:\Users\gorasima\source\repos\lab9_pattern\lab9_pattern\bin\Debug\net8.0\lab9_pattern.runtimeconfig.json
+C:\Users\gorasima\source\repos\lab9_pattern\lab9_pattern\bin\Debug\net8.0\lab9_pattern.dll
+C:\Users\gorasima\source\repos\lab9_pattern\lab9_pattern\bin\Debug\net8.0\lab9_pattern.pdb
+C:\Users\gorasima\source\repos\lab9_pattern\lab9_pattern\obj\Debug\net8.0\lab9_pattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gorasima\source\repos\lab9_pattern\lab9_pattern\obj\Debug\net8.0\lab9_pattern.AssemblyInfoInputs.cache
+C:\Users\gorasima\source\repos\lab9_pattern\lab9_pattern\obj\Debug\net8.0\lab9_pattern.AssemblyInfo.cs
+C:\Users\gorasima\source\repos\lab9_pattern\lab9_pattern\obj\Debug\net8.0\lab9_pattern.csproj.CoreCompileInputs.cache
+C:\Users\gorasima\source\repos\lab9_pattern\lab9_pattern\obj\Debug\net8.0\lab9_pattern.dll
+C:\Users\gorasima\source\repos\lab9_pattern\lab9_pattern\obj\Debug\net8.0\refint\lab9_pattern.dll
+C:\Users\gorasima\source\repos\lab9_pattern\lab9_pattern\obj\Debug\net8.0\lab9_pattern.pdb
+C:\Users\gorasima\source\repos\lab9_pattern\lab9_pattern\obj\Debug\net8.0\lab9_pattern.genruntimeconfig.cache
+C:\Users\gorasima\source\repos\lab9_pattern\lab9_pattern\obj\Debug\net8.0\ref\lab9_pattern.dll
