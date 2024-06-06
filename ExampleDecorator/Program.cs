@@ -1,104 +1,87 @@
 ﻿namespace ExampleDecorator;
 
-// The base Component interface defines operations that can be altered by
-// decorators.
-public abstract class Component
+public interface ICoffee
 {
-    public abstract string Operation();
+    string GetDescription();
+    double GetCost();
 }
 
-// Concrete Components provide default implementations of the operations.
-class ConcreteComponent : Component
+public class SimpleCoffee : ICoffee
 {
-    public override string Operation()
+    public string GetDescription()
     {
-        return "ConcreteComponent";
-    }
-}
-
-// The base Decorator class follows the same interface as the other
-// components.
-abstract class Decorator : Component
-{
-    protected Component _component;
-
-    public Decorator(Component component)
-    {
-        this._component = component;
+        return "Simple Coffee";
     }
 
-    public void SetComponent(Component component)
+    public double GetCost()
     {
-        this._component = component;
-    }
-
-    // The Decorator delegates all work to the wrapped component.
-    public override string Operation()
-    {
-        if (this._component != null)
-        {
-            return this._component.Operation();
-        }
-        else
-        {
-            return string.Empty;
-        }
+        return 2.00; 
     }
 }
 
-// Concrete Decorators call the wrapped object and alter its result in some
-// way.
-class ConcreteDecoratorA : Decorator
+public abstract class CoffeeDecorator : ICoffee
 {
-    public ConcreteDecoratorA(Component comp) : base(comp)
+    protected ICoffee _coffee;
+
+    public CoffeeDecorator(ICoffee coffee)
     {
+        _coffee = coffee;
     }
 
-    // Decorators may call parent implementation of the operation, instead
-    // of calling the wrapped object directly.
-    public override string Operation()
+    public virtual string GetDescription()
     {
-        return $"ConcreteDecoratorA({base.Operation()})";
+        return _coffee.GetDescription();
+    }
+
+    public virtual double GetCost()
+    {
+        return _coffee.GetCost();
+    }
+}
+public class MilkDecorator : CoffeeDecorator
+{
+    public MilkDecorator(ICoffee coffee) : base(coffee) { }
+
+    public override string GetDescription()
+    {
+        return _coffee.GetDescription() + ", Milk";
+    }
+
+    public override double GetCost()
+    {
+        return _coffee.GetCost() + 0.50; 
     }
 }
 
-// Decorators can execute their behavior either before or after the call to
-// a wrapped object.
-class ConcreteDecoratorB : Decorator
+public class SugarDecorator : CoffeeDecorator
 {
-    public ConcreteDecoratorB(Component comp) : base(comp)
+    public SugarDecorator(ICoffee coffee) : base(coffee) { }
+
+    public override string GetDescription()
     {
+        return _coffee.GetDescription() + ", Sugar";
     }
 
-    public override string Operation()
+    public override double GetCost()
     {
-        return $"ConcreteDecoratorB({base.Operation()})";
-    }
-}
-
-public class Client
-{
-    // The client code works with all objects using the Component interface.
-    public void ClientCode(Component component)
-    {
-        Console.WriteLine("RESULT: " + component.Operation());
+        return _coffee.GetCost() + 0.20; 
     }
 }
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        Client client = new Client();
+        ICoffee coffee = new SimpleCoffee();
+        Console.WriteLine($"{coffee.GetDescription()} - ${coffee.GetCost()}");
 
-        var simple = new ConcreteComponent();
-        Console.WriteLine("Client: I get a simple component:");
-        client.ClientCode(simple);
-        Console.WriteLine();
-        
-        ConcreteDecoratorA decorator1 = new ConcreteDecoratorA(simple);
-        ConcreteDecoratorB decorator2 = new ConcreteDecoratorB(decorator1);
-        Console.WriteLine("Client: Now I've got a decorated component:");
-        client.ClientCode(decorator2);
+        coffee = new MilkDecorator(coffee);
+        Console.WriteLine($"{coffee.GetDescription()} - ${coffee.GetCost()}");
+
+        coffee = new SugarDecorator(coffee);
+        Console.WriteLine($"{coffee.GetDescription()} - ${coffee.GetCost()}");
+
+        coffee = new MilkDecorator(coffee); 
+        Console.WriteLine($"{coffee.GetDescription()} - ${coffee.GetCost()}");
     }
 }
